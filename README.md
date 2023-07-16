@@ -1,37 +1,37 @@
-## Explaination 
+# Async-Inn
 
-The "Hotel" table represents a hotel in the system.
-It has attributes such as HotelID (primary key), Name, City, State, Address, and Phone Number.
-The HotelID is a unique identifier for each hotel.
-Each hotel can have multiple rooms associated with it.
-Room:
+- name: Hasan Mufdy & Abdelrahman Sweiti
+- date: 16/7/2023
 
-The "Room" table represents individual rooms within a hotel.
-It has attributes such as RoomID (primary key), HotelID (foreign key referencing Hotel), RoomNumber, Layout, Nickname, Price, and IsPetFriendly.
-The RoomID is a unique identifier for each room.
-The HotelID is a foreign key referencing the corresponding hotel to which the room belongs.
-Each room can have various properties like RoomNumber (room identifier), Layout (room layout type), Nickname (room nickname), Price (room price), and IsPetFriendly (indicating if the room is pet-friendly).
-Amenity:
+## ERD diagram:
 
-The "Amenity" table represents amenities that can be associated with rooms.
-It has attributes such as AmenityID (primary key) and Name.
-The AmenityID is a unique identifier for each amenity.
-Each amenity has a Name, which represents the specific feature or service provided by the hotel.
-RoomAmenity:
+![]()
 
-The "RoomAmenity" table represents the many-to-many relationship between rooms and amenities.
-It serves as a junction table to associate specific amenities with specific rooms.
-It has attributes such as RoomAmenityID (primary key), RoomID (foreign key referencing Room), and AmenityID (foreign key referencing Amenity).
-The RoomAmenityID is a unique identifier for each entry in the junction table.
-The RoomID is a foreign key referencing the room to which the amenity is associated.
-The AmenityID is a foreign key referencing the amenity associated with the room.
-The relationships between the tables are as follows:
+## ERD diagram explanation:
 
-One Hotel can have multiple Rooms (one-to-many relationship between Hotel and Room).
-Each Room belongs to one Hotel (many-to-one relationship between Room and Hotel).
-Each Room can have multiple Amenities (many-to-many relationship between Room and Amenity).
-Each Amenity can be associated with multiple Rooms (many-to-many relationship between Amenity and Room).
+this ERD is for a hotel system.
+hotel name: Async Inn.
+
+1. Location:
+   the hotel has multiple locations, each one of them has a unique ID, name, city, state, address, and phone number.
+
+2. Room:
+   each room has a unique number, location_ID (which is related to the location entity), nickname, and pet permission.
+
+- each location has rooms, and each room type exists in multiple hotel locations.
+
+3. Amenity:
+   each amenity contains a unique ID and a name.
+
+4. Room_Amenity:
+   each room has a Room_Number (which is related to the Room entity), price, and a unique ID.
+
+- each room has amenities, and each amenity is added to multiple rooms.
+
+- conclusion:
+  Async Inn has branches in multiple locations, each branch has different room numbers and feature. rooms also vary based on amenities, features, the permission to have pets, prices, and so on.
+  this system works as a management tool for the hotel and its assets.
 
 
 ## WhiteBoard
-![image](https://github.com/Abdelrahman-Sweiti/Lab11/assets/102755704/752b8011-cbb4-4d79-b789-95163cb6b112)
+![image](https://github.com/Abdelrahman-Sweiti/Lab11/assets/102755704/2a2b11fd-bd28-4a8b-bbd0-6f3582614d1d)
